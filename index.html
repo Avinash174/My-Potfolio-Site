@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Avinash Magar · Mobile & Flutter Developer</title>
-  <meta name="description" content="Portfolio of Avinash Magar — Mobile app developer (Flutter, Android, iOS). Projects, experience, and contact." />
-  <meta name="theme-color" content="#7c3aed" />
+  <title>Avinash Magar — Mobile & Flutter Developer</title>
+  <meta name="description" content="Portfolio of Avinash Magar — Flutter, Android, iOS, Machine Learning, and Data Science developer." />
+  <meta name="theme-color" content="#0ea5e9" />
   <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+  <!-- Navbar -->
+  <header class="nav-wrap">
     <div class="container nav">
-      <div class="brand">
-        <div class="avatar" aria-hidden="true">AM</div>
-        <strong>Avinash Magar</strong>
-        <span class="pill" title="Location">Pune, Maharashtra • India</span>
-      </div>
+      <a class="brand" href="#top" aria-label="Home">
+        <div class="logo">AM</div>
+        <span>Avinash Magar</span>
+      </a>
       <nav class="menu" aria-label="Primary">
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
-        <a href="#skills-section">Skills</a>
         <a href="#contact">Contact</a>
         <a class="pill" href="https://github.com/Avinash174" target="_blank" rel="noreferrer">GitHub ↗</a>
         <button id="themeBtn" class="pill" aria-pressed="false" title="Toggle theme">🌓</button>
@@ -28,316 +29,137 @@
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="reveal up delay-1">
-          <div class="kicker"><span class="dot"></span> Available for full‑time iOS/Flutter roles</div>
-          <h1>
-            Building delightful mobile apps in
-            <span class="gradient-text">Flutter • Android • iOS</span>
-          </h1>
-          <p class="lead">Flutter & iOS developer with a B.Tech (IT, VIIT Pune, 2023). I build clean, scalable apps using Flutter, native Android (Java), and iOS (Swift/Objective‑C). Exploring Data Science/ML to ship data‑driven features.</p>
-          <div class="cta">
-            <a class="btn primary glow" href="#projects">View my work</a>
-            <a class="btn" href="assets/Avinash_Magar_Resume.pdf" download>Download Resume</a>
-            <a class="btn" href="https://www.linkedin.com/in/avinash-magar-1ba853168" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn" href="https://github.com/Avinash174" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="btn" href="https://linktr.ee/avinashmagar15" target="_blank" rel="noreferrer">Linktree</a>
-          </div>
-
-          <div class="stack" id="skills">
-            <span class="badge">Flutter</span>
-            <span class="badge">Dart</span>
-            <span class="badge">Swift</span>
-            <span class="badge">Objective‑C</span>
-            <span class="badge">Android (Java)</span>
-            <span class="badge">Firebase</span>
-            <span class="badge">Supabase</span>
-            <span class="badge">REST APIs</span>
-            <span class="badge">BLoC</span>
-            <span class="badge">Core Data</span>
-            <span class="badge">Data Science</span>
-            <span class="badge">Machine Learning</span>
-            <span class="badge">Deep Learning</span>
-            <span class="badge">TensorFlow</span>
-            <span class="badge">PyTorch</span>
-          </div>
+  <!-- Hero -->
+  <section id="top" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left reveal up">
+        <p class="kicker"><span class="dot"></span> Mobile App Developer</p>
+        <h1>Crafting fast, clean, and scalable apps.</h1>
+        <p class="lead">Flutter • Android • iOS · Data Science • ML • DL (TensorFlow, PyTorch)</p>
+        <div class="cta">
+          <a class="btn primary glow" href="#projects">See Projects</a>
+          <a class="btn" href="assets/Avinash_Magar_Resume.pdf" download>Download Resume</a>
+          <a class="btn" href="https://www.linkedin.com/in/avinash-magar-1ba853168" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-        <div class="reveal up delay-2">
-          <div class="card float" aria-label="Featured project">
-            <img src="https://picsum.photos/800/450?grayscale" alt="Preview of featured project" />
-            <div class="body">
-              <h3>DoIt — Smart Notes & Tasks</h3>
-              <p class="sub">Note‑taking & tasks with clean architecture and offline‑first sync.</p>
-              <div class="chips">
-                <span class="chip">Flutter</span>
-                <span class="chip">Clean Architecture</span>
-                <span class="chip">Firebase</span>
-              </div>
-            </div>
-            <div class="actions">
-              <a class="btn" href="#" target="_blank" rel="noreferrer">Case Study</a>
-              <a class="btn primary" href="#" target="_blank" rel="noreferrer">View on Play Store</a>
-            </div>
-          </div>
+        <div class="meta">
+          Pune, India · <a href="mailto:avinashmagar15@gmail.com">avinashmagar15@gmail.com</a>
         </div>
       </div>
-      <div class="hero-blob" aria-hidden="true"></div>
-
-      <!-- LOGO STRIP -->
-      <div class="container logos reveal up delay-3" aria-label="Tech logos">
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="Flutter" role="img"><path fill="#54C5F8" d="M76 12 12 76l16 16 64-64z"/><path fill="#01579B" d="m92 28-32 32 16 16 16-16 24 24-40 40-40-40 16-16 24 24 24-24z"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="Dart" role="img"><path fill="#0175C2" d="M22 22 70 12l36 36-10 48-48 10L12 70z"/><path fill="#29B6F6" d="M70 12v46l36-10z"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="Android" role="img"><path fill="#3DDC84" d="M28 76h10v24H28zm62 0h10v24H90zM20 60h88v28H20zM48 24l-8-12 6-4 9 14c7-3 17-3 24 0l9-14 6 4-8 12"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="Swift" role="img"><path fill="#F05138" d="M16 16h96v96H16z"/><path fill="#fff" d="M84 88c-20 12-46-6-58-24 12 10 32 22 44 18-10-8-22-20-30-30 14 12 34 24 46 22-10-10-24-28-30-38 18 16 34 34 38 38 4 10-2 18-10 14z"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="Java" role="img"><path fill="#f89820" d="M64 8s18 20-8 32c-22 10 30 14 30 34S50 90 36 84"/><path fill="#5382a1" d="M92 98c0 14-64 14-64 0 0-8 16-10 32-10s32 2 32 10z"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="Firebase" role="img"><path fill="#FFCA28" d="M24 96 40 24l16 20z"/><path fill="#FFA000" d="m40 24 20 28 20-28 4 80-60-8z"/><path fill="#F57F17" d="M24 96l60 8-28 12z"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="Python" role="img"><path fill="#3776AB" d="M64 12c22 0 20 8 20 20v12H44c-16 0-20-4-20-16S28 12 44 12z"/><path fill="#FFD43B" d="M64 116c-22 0-20-8-20-20V84h40c16 0 20 4 20 16s-4 16-20 16z"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="TensorFlow" role="img"><path fill="#FF6F00" d="M64 16 16 40v16l16-8v48l16 8V56l16-8z"/><path fill="#FFA000" d="m64 16 48 24v16l-16-8v48l-16 8V56l-16-8z"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="PyTorch" role="img"><circle cx="96" cy="32" r="10" fill="#EE4C2C"/><path fill="#EE4C2C" d="M64 20l10 10a38 38 0 1 1-10-10z"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="Supabase" role="img"><path fill="#3ECF8E" d="M72 16 24 72h40l-8 40 48-56H64z"/></svg></div>
-        <div class="logo"><svg viewBox="0 0 128 128" aria-label="GitHub" role="img"><path fill="#ffffff" d="M64 12a52 52 0 0 0-16 101c3 1 4-1 4-3v-11c-18 4-22-8-22-8-3-8-7-10-7-10-6-4 0-4 0-4 7 0 10 7 10 7 6 10 15 7 19 5 1-5 4-7 6-8-15-2-31-7-31-33 0-7 3-13 7-17-1-2-3-9 1-18 0 0 6-2 18 7a62 62 0 0 1 32 0c12-9 18-7 18-7 4 9 2 16 1 18 4 4 7 10 7 17 0 26-16 31-31 33 2 2 4 6 4 12v18c0 2 1 4 4 3A52 52 0 0 0 64 12z"/></svg></div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title reveal up">Selected Projects</h2>
-        <p class="sub reveal up delay-1">A mix of shipped apps and learning builds. More on Linktree.</p>
-
-        <div class="cards" role="list">
-          <!-- Card 1 (Samachar) -->
-          <article class="card tilt reveal up delay-1" role="listitem" tabindex="0">
-            <img src="https://picsum.photos/seed/samachar/900/500" alt="Screenshot of news app" />
-            <div class="body">
-              <h3>Samachar — MVVM News App</h3>
-              <p class="sub">Clean MVVM with Provider, pagination, bookmarking, and offline cache via SQLite.</p>
-              <div class="chips">
-                <span class="chip">Flutter</span>
-                <span class="chip">MVVM</span>
-                <span class="chip">Provider</span>
-                <span class="chip">SQLite</span>
-              </div>
-            </div>
-            <div class="actions">
-              <a class="btn" href="#" target="_blank">Case Study</a>
-              <a class="btn" href="#" target="_blank">Source</a>
-            </div>
-          </article>
-
-          <!-- Card 2 (TrueReward) -->
-          <article class="card tilt reveal up delay-2" role="listitem" tabindex="0">
-            <img src="https://picsum.photos/seed/reward/900/500" alt="Screenshot of rewards app" />
-            <div class="body">
-              <h3>TrueReward — Scan & Earn</h3>
-              <p class="sub">QR‑based loyalty with Firebase auth, role‑based admin, and real‑time dashboards.</p>
-              <div class="chips">
-                <span class="chip">Flutter</span>
-                <span class="chip">Firebase</span>
-                <span class="chip">GetX</span>
-                <span class="chip">Admin Panel</span>
-              </div>
-            </div>
-            <div class="actions">
-              <a class="btn" href="#" target="_blank">Write‑up</a>
-              <a class="btn" href="#" target="_blank">Play Store</a>
-            </div>
-          </article>
-
-          <!-- Optional Coming Soon -->
-          <article class="card tilt reveal up delay-3" role="listitem" tabindex="0">
-            <img src="https://picsum.photos/seed/comingsoon/900/500" alt="Coming soon placeholder" />
-            <div class="body">
-              <h3>Next Up — Coming Soon</h3>
-              <p class="sub">A new Flutter/iOS build in progress. Stay tuned!</p>
-              <div class="chips">
-                <span class="chip">Flutter</span>
-                <span class="chip">Swift</span>
-                <span class="chip">Clean Architecture</span>
-              </div>
-            </div>
-            <div class="actions">
-              <a class="btn" href="https://linktr.ee/avinashmagar15" target="_blank">Follow updates</a>
-            </div>
-          </article>
+      <div class="hero-right reveal up delay-1">
+        <div class="portrait-card float">
+          <img src="assets/my_photo.jpeg" alt="Avinash Magar" />
         </div>
       </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="container">
-        <h2 class="section-title reveal up">Experience</h2>
-        <div class="timeline" aria-label="Timeline">
-          <div class="tl-item reveal up delay-1">
-            <h4>S IT Solutions Pvt Ltd — Trainee Flutter Developer</h4>
-            <div class="meta">Aug 2025 – Present • Pune, Maharashtra</div>
-            <p>Building production Flutter features; collaborating on UI polish and performance.</p>
-          </div>
-          <div class="tl-item reveal up delay-2">
-            <h4>Trueview India — Engineer (Android & iOS)</h4>
-            <div class="meta">May 2025 – Jul 2025 • Aurangabad, Maharashtra</div>
-            <p>Engineered mobile modules and resolved platform‑specific issues.</p>
-          </div>
-          <div class="tl-item reveal up delay-3">
-            <h4>Recipto — Software Developer Intern</h4>
-            <div class="meta">Nov 2024 – Apr 2025 • Hyderabad, Telangana</div>
-            <p>Contributed to Flutter codebase; implemented REST integrations and state management.</p>
-          </div>
-          <div class="tl-item reveal up delay-4">
-            <h4>Verdant Info Comm Systems — Flutter Developer Intern</h4>
-            <div class="meta">Feb 2024 – May 2024 • Chennai, Tamil Nadu</div>
-            <p>Built MVVM screens, optimized API calls, and shipped features on tight timelines.</p>
-          </div>
-          <div class="tl-item reveal up delay-5">
-            <h4>Warehow Technologies — Full‑stack Developer</h4>
-            <div class="meta">Aug 2023 – Feb 2024 • Gurugram, Haryana</div>
-            <p>Worked across web/app stack; helped deliver marketing and product features.</p>
-          </div>
-          <div class="tl-item reveal up delay-6">
-            <h4>FreshNic — Front‑End Developer Intern</h4>
-            <div class="meta">Jun 2023 – Jul 2023</div>
-            <p>Implemented responsive UI and component refactors.</p>
-          </div>
-          <div class="tl-item reveal up delay-7">
-            <h4>Techtrail Technologies — Intern</h4>
-            <div class="meta">Jan 2023 – May 2023</div>
-            <p>Contributed to app features and QA.</p>
-          </div>
-          <div class="tl-item reveal up delay-8">
-            <h4>Help Health Foundation — Flutter Development Intern</h4>
-            <div class="meta">Feb 2023 – Mar 2023</div>
-            <p>Delivered Flutter screens and API integrations.</p>
-          </div>
-          <div class="tl-item reveal up delay-9">
-            <h4>GeeksforGeeks VIIT — Flutter Developer</h4>
-            <div class="meta">Sep 2021 – Feb 2022</div>
-            <p>Campus chapter projects and mentoring peers.</p>
-          </div>
-          <div class="tl-item reveal up delay-10">
-            <h4>InternBug — Campus Ambassador</h4>
-            <div class="meta">Sep 2021</div>
-            <p>Community outreach and events.</p>
-          </div>
-          <div class="tl-item reveal up delay-11">
-            <h4>NEW BARRACKPORE NAVACHETNA WELFARE SOCIETY — SMM Intern</h4>
-            <div class="meta">Sep 2021</div>
-            <p>Managed posts and engagement for social cause.</p>
-          </div>
-          <div class="tl-item reveal up delay-12">
-            <h4>Atypical Advantage — Student Ambassador</h4>
-            <div class="meta">Aug 2021</div>
-            <p>Volunteered for social work initiatives.</p>
-          </div>
-          <div class="tl-item reveal up delay-13">
-            <h4>Technex, IIT (BHU) Varanasi — Android App Development</h4>
-            <div class="meta">Nov 2020 – Dec 2020</div>
-            <p>Completed Android app dev program.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS / EDUCATION / CERTS -->
-    <section id="skills-section">
-      <div class="container grid-2">
-        <div class="reveal up">
-          <h2 class="section-title">Skills</h2>
-          <p class="sub">Strong in architecture and shipping polished mobile experiences.</p>
-          <div class="stack">
-            <span class="badge">Clean Architecture</span>
-            <span class="badge">BLoC / GetX / Riverpod</span>
-            <span class="badge">MVVM / MVC</span>
-            <span class="badge">Firebase / Supabase</span>
-            <span class="badge">SQLite / Hive</span>
-            <span class="badge">REST / GraphQL</span>
-            <span class="badge">CI/CD</span>
-            <span class="badge">Core Data</span>
-            <span class="badge">Data Science</span>
-            <span class="badge">Machine Learning</span>
-            <span class="badge">Deep Learning</span>
-            <span class="badge">TensorFlow</span>
-            <span class="badge">PyTorch</span>
-          </div>
-          <div class="gap"></div>
-          <h3>Languages</h3>
-          <div class="stack">
-            <span class="badge">English — Limited Working</span>
-            <span class="badge">Hindi — Native/Bilingual</span>
-            <span class="badge">Marathi — Native/Bilingual</span>
-          </div>
-        </div>
-        <div class="reveal up delay-1">
-          <h2 class="section-title">Education</h2>
-          <p class="sub">B.Tech (IT), Vishwakarma Institute of Information Technology — 2023</p>
-          <p>Diploma, Computer Engineering — Government Polytechnic Aurangabad (2020).</p>
-          <p>Certificate, Data Science Engineering — KP INFOTECH Services Pvt Ltd (Oct 2024 – Apr 2025).</p>
-          <div class="gap"></div>
-          <h3>Certifications</h3>
-          <div class="stack">
-            <span class="badge">Flutter</span>
-            <span class="badge">SQL & Relational DB 101</span>
-            <span class="badge">Python for Beginners</span>
-            <span class="badge">Red Hat SysAdmin L1 (3‑day)</span>
-            <span class="badge">Cybersecurity Workshop</span>
-          </div>
-          <div class="gap"></div>
-          <h3>Honors & Awards</h3>
-          <div class="stack">
-            <span class="badge">Bolt IoT & ML Course</span>
-            <span class="badge">Traffic Enhancement System</span>
-            <span class="badge">Facial Emotion/Age/Gender Recognition</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title reveal up">Let’s build something</h2>
-        <p class="sub reveal up delay-1">Email me or ping on LinkedIn. I usually reply within a day.</p>
-        <div class="cards">
-          <div class="card reveal up delay-1">
-            <div class="body">
-              <h3>Contact</h3>
-              <p>Email: <a href="mailto:avinashmagar15@gmail.com">avinashmagar15@gmail.com</a></p>
-              <p>LinkedIn: <a href="https://www.linkedin.com/in/avinash-magar-1ba853168" target="_blank" rel="noreferrer">linkedin.com/in/avinash-magar-1ba853168</a></p>
-              <p>GitHub: <a href="https://github.com/Avinash174" target="_blank" rel="noreferrer">github.com/Avinash174</a></p>
-              <p>Linktree: <a href="https://linktr.ee/avinashmagar15" target="_blank" rel="noreferrer">linktr.ee/avinashmagar15</a></p>
-              <p>Portfolio: <a href="https://sites.google.com/u/3/d/1jo90NCsIY-bptmv4F8B5LTitsbJrNlb-/p/1GyI7-cHGHQbR-xYuBGvYjSKs-Mou1q5M/edit" target="_blank" rel="noreferrer">Google Sites</a></p>
-            </div>
-          </div>
-          <div class="card reveal up delay-2">
-            <div class="body">
-              <h3>Resume</h3>
-              <p>Place your PDF at <code>assets/Avinash_Magar_Resume.pdf</code> to enable the download button.</p>
-              <a class="btn" href="assets/Avinash_Magar_Resume.pdf" download>Download Resume</a>
-            </div>
-          </div>
-          <div class="card reveal up delay-3">
-            <div class="body">
-              <h3>Quick Links</h3>
-              <div class="chips">
-                <a class="chip" href="#projects">Projects</a>
-                <a class="chip" href="#experience">Experience</a>
-                <a class="chip" href="#skills-section">Skills</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Avinash Magar — Built with HTML/CSS/JS.
     </div>
-  </footer>
+    <div class="hero-blob" aria-hidden="true"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title reveal up">About</h2>
+      <p class="sub reveal up delay-1">
+        I’m a mobile developer specializing in Flutter, Android (Java) and iOS (Swift/Objective‑C). I build clean architecture,
+        scalable app systems and modern UI. I’m also exploring Data Science, Machine Learning and Deep Learning to deliver smarter features.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title reveal up">Projects</h2>
+      <p class="sub reveal up delay-1">Selected work. More on <a href="https://github.com/Avinash174" target="_blank" rel="noreferrer">GitHub</a>.</p>
+
+      <div class="cards" role="list">
+        <!-- Samachar -->
+        <article class="card tilt reveal up delay-1" role="listitem" tabindex="0">
+          <img src="https://picsum.photos/seed/samachar/1000/560" alt="Samachar news app screenshot" />
+          <div class="body">
+            <h3>Samachar — MVVM News App</h3>
+            <p class="sub">MVVM + Provider · Pagination, offline cache via SQLite, smooth UI.</p>
+            <div class="chips">
+              <span class="chip">Flutter</span>
+              <span class="chip">MVVM</span>
+              <span class="chip">Provider</span>
+              <span class="chip">SQLite</span>
+            </div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="#" target="_blank">Case Study</a>
+            <a class="btn" href="#" target="_blank">Source</a>
+          </div>
+        </article>
+
+        <!-- Placeholder -->
+        <article class="card tilt reveal up delay-2" role="listitem" tabindex="0">
+          <img src="https://picsum.photos/seed/next/1000/560" alt="Next project placeholder" />
+          <div class="body">
+            <h3>Your Next Project</h3>
+            <p class="sub">Replace this card with your next deployed build.</p>
+            <div class="chips">
+              <span class="chip">Flutter</span>
+              <span class="chip">Clean Architecture</span>
+            </div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://linktr.ee/avinashmagar15" target="_blank">Follow updates</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title reveal up">Skills</h2>
+      <div class="stack reveal up delay-1">
+        <span class="badge">Flutter</span><span class="badge">Dart</span><span class="badge">Swift</span><span class="badge">Objective‑C</span>
+        <span class="badge">Android (Java)</span><span class="badge">Firebase</span><span class="badge">Supabase</span>
+        <span class="badge">Python</span><span class="badge">ML</span><span class="badge">Deep Learning</span>
+        <span class="badge">TensorFlow</span><span class="badge">PyTorch</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title reveal up">Experience</h2>
+      <div class="timeline">
+        <div class="tl-item reveal up delay-1"><h4>S IT Solutions — Trainee Flutter Developer</h4><div class="meta">Aug 2025 – Present</div></div>
+        <div class="tl-item reveal up delay-2"><h4>Trueview India — Engineer (Android & iOS)</h4><div class="meta">May 2025 – Jul 2025</div></div>
+        <div class="tl-item reveal up delay-3"><h4>Recipto — Software Developer Intern</h4><div class="meta">Nov 2024 – Apr 2025</div></div>
+        <div class="tl-item reveal up delay-4"><h4>Verdant Info Comm — Flutter Intern</h4><div class="meta">Feb 2024 – May 2024</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title reveal up">Contact</h2>
+      <div class="cards">
+        <div class="card reveal up delay-1">
+          <div class="body">
+            <p>Email: <a href="mailto:avinashmagar15@gmail.com">avinashmagar15@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/avinash-magar-1ba853168" target="_blank" rel="noreferrer">linkedin.com/in/avinash-magar-1ba853168</a></p>
+            <p>GitHub: <a href="https://github.com/Avinash174" target="_blank" rel="noreferrer">github.com/Avinash174</a></p>
+          </div>
+        </div>
+        <div class="card reveal up delay-2">
+          <div class="body">
+            <h3>Resume</h3>
+            <p>Place your PDF at:<br><code>assets/Avinash_Magar_Resume.pdf</code></p>
+            <a class="btn" href="assets/Avinash_Magar_Resume.pdf" download>Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="container">© <span id="year"></span> Avinash Magar</div></footer>
 
   <script src="app.js"></script>
 </body>
