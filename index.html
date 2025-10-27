@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avinash Magar · Mobile & Flutter Developer</title>
+  <meta name="description" content="Portfolio of Avinash Magar — Mobile app developer (Flutter, Android, iOS). Projects, experience, and contact." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">AM</div>
+        <strong>Avinash Magar</strong>
+        <span class="pill" title="Location">Pune, Maharashtra • India</span>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn" class="pill" aria-pressed="false" title="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal up delay-1">
+          <div class="kicker"><span class="dot"></span> Available for full‑time iOS/Flutter roles</div>
+          <h1>
+            Mobile App Developer focused on
+            <span class="gradient-text">Flutter • Android • iOS</span>
+          </h1>
+          <p class="lead">Flutter & iOS developer with a B.Tech (IT, VIIT Pune, 2023). I build clean, scalable apps using Flutter, native Android (Java), and iOS (Swift/Objective‑C). Exploring Data Science/ML to ship data‑driven features.</p>
+          <div class="cta">
+            <a class="btn primary pulse" href="#projects">View my work</a>
+            <a class="btn" href="assets/Avinash_Magar_Resume.pdf" download>Download Resume</a>
+            <a class="btn" href="https://www.linkedin.com/in/avinash-magar-1ba853168" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="https://linktr.ee/avinashmagar15" target="_blank" rel="noreferrer">Linktree</a>
+          </div>
+          <div class="stack" id="skills">
+            <span class="badge">Flutter</span>
+            <span class="badge">Dart</span>
+            <span class="badge">Swift</span>
+            <span class="badge">Objective‑C</span>
+            <span class="badge">Android (Java)</span>
+            <span class="badge">Firebase</span>
+            <span class="badge">Supabase</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">BLoC</span>
+            <span class="badge">Core Data</span>
+          </div>
+        </div>
+        <div class="reveal up delay-2">
+          <div class="card float" aria-label="Featured project">
+            <img src="https://picsum.photos/800/450?grayscale" alt="Preview of featured project" />
+            <div class="body">
+              <h3>DoIt — Smart Notes & Tasks</h3>
+              <p class="sub">AI‑assisted note‑taking and task management app with clean architecture and offline‑first sync.</p>
+              <div class="chips">
+                <span class="chip">Flutter</span>
+                <span class="chip">Clean Architecture</span>
+                <span class="chip">Firebase</span>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank" rel="noreferrer">Case Study</a>
+              <a class="btn primary" href="#" target="_blank" rel="noreferrer">View on Play Store</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-blob" aria-hidden="true"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title reveal up">Selected Projects</h2>
+        <p class="sub reveal up delay-1">A mix of shipped apps and learning builds. More on GitHub/Linktree.</p>
+
+        <div class="cards" role="list">
+          <!-- Card 1 -->
+          <article class="card tilt reveal up delay-1" role="listitem" tabindex="0">
+            <img src="https://picsum.photos/seed/truecloud/900/500" alt="Screenshot of CCTV app" />
+            <div class="body">
+              <h3>TrueCloud Plus — CCTV Monitoring</h3>
+              <p class="sub">Live RTSP streaming on Android & iOS with secure auth, alerts, and smooth video pipeline.</p>
+              <div class="chips">
+                <span class="chip">Flutter</span>
+                <span class="chip">Riverpod</span>
+                <span class="chip">RTSP</span>
+                <span class="chip">Notifications</span>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank">GitHub</a>
+              <a class="btn" href="#" target="_blank">Demo</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card tilt reveal up delay-2" role="listitem" tabindex="0">
+            <img src="https://picsum.photos/seed/samachar/900/500" alt="Screenshot of news app" />
+            <div class="body">
+              <h3>Samachar — MVVM News App</h3>
+              <p class="sub">Clean MVVM with Provider, pagination, bookmarking, and offline cache via SQLite.</p>
+              <div class="chips">
+                <span class="chip">Flutter</span>
+                <span class="chip">MVVM</span>
+                <span class="chip">Provider</span>
+                <span class="chip">SQLite</span>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank">Case Study</a>
+              <a class="btn" href="#" target="_blank">Source</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card tilt reveal up delay-3" role="listitem" tabindex="0">
+            <img src="https://picsum.photos/seed/reward/900/500" alt="Screenshot of rewards app" />
+            <div class="body">
+              <h3>TrueReward — Scan & Earn</h3>
+              <p class="sub">QR‑based loyalty system with Firebase auth, role‑based admin, and real‑time dashboards.</p>
+              <div class="chips">
+                <span class="chip">Flutter</span>
+                <span class="chip">Firebase</span>
+                <span class="chip">GetX</span>
+                <span class="chip">Admin Panel</span>
+              </div>
+            </div>
+            <div class="actions">
+              <a class="btn" href="#" target="_blank">Write‑up</a>
+              <a class="btn" href="#" target="_blank">Play Store</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title reveal up">Experience</h2>
+        <div class="timeline" aria-label="Timeline">
+          <div class="tl-item reveal up delay-1">
+            <h4>S IT Solutions Pvt Ltd — Trainee Flutter Developer</h4>
+            <div class="meta">Aug 2025 – Present • Pune, Maharashtra</div>
+            <p>Building production Flutter features; collaborating on UI polish and performance.</p>
+          </div>
+          <div class="tl-item reveal up delay-2">
+            <h4>Trueview India — Engineer (Android & iOS)</h4>
+            <div class="meta">May 2025 – Jul 2025 • Aurangabad, Maharashtra</div>
+            <p>Engineered mobile modules and resolved platform‑specific issues.</p>
+          </div>
+          <div class="tl-item reveal up delay-3">
+            <h4>Recipto — Software Developer Intern</h4>
+            <div class="meta">Nov 2024 – Apr 2025 • Hyderabad, Telangana</div>
+            <p>Contributed to Flutter codebase; implemented REST integrations and state management.</p>
+          </div>
+          <div class="tl-item reveal up delay-4">
+            <h4>Verdant Info Comm Systems — Flutter Developer Intern</h4>
+            <div class="meta">Feb 2024 – May 2024 • Chennai, Tamil Nadu</div>
+            <p>Built MVVM screens, optimized API calls, and shipped features on tight timelines.</p>
+          </div>
+          <div class="tl-item reveal up delay-5">
+            <h4>Warehow Technologies — Full‑stack Developer</h4>
+            <div class="meta">Aug 2023 – Feb 2024 • Gurugram, Haryana</div>
+            <p>Worked across web/app stack; helped deliver marketing and product features.</p>
+          </div>
+          <div class="tl-item reveal up delay-6">
+            <h4>FreshNic — Front‑End Developer Intern</h4>
+            <div class="meta">Jun 2023 – Jul 2023</div>
+            <p>Implemented responsive UI and component refactors.</p>
+          </div>
+          <div class="tl-item reveal up delay-7">
+            <h4>Techtrail Technologies — Intern</h4>
+            <div class="meta">Jan 2023 – May 2023</div>
+            <p>Contributed to app features and QA.</p>
+          </div>
+          <div class="tl-item reveal up delay-8">
+            <h4>Help Health Foundation — Flutter Development Intern</h4>
+            <div class="meta">Feb 2023 – Mar 2023</div>
+            <p>Delivered Flutter screens and API integrations.</p>
+          </div>
+          <div class="tl-item reveal up delay-9">
+            <h4>GeeksforGeeks VIIT — Flutter Developer</h4>
+            <div class="meta">Sep 2021 – Feb 2022</div>
+            <p>Campus chapter projects and mentoring peers.</p>
+          </div>
+          <div class="tl-item reveal up delay-10">
+            <h4>InternBug — Campus Ambassador</h4>
+            <div class="meta">Sep 2021</div>
+            <p>Community outreach and events.</p>
+          </div>
+          <div class="tl-item reveal up delay-11">
+            <h4>NEW BARRACKPORE NAVACHETNA WELFARE SOCIETY — SMM Intern</h4>
+            <div class="meta">Sep 2021</div>
+            <p>Managed posts and engagement for social cause.</p>
+          </div>
+          <div class="tl-item reveal up delay-12">
+            <h4>Atypical Advantage — Student Ambassador</h4>
+            <div class="meta">Aug 2021</div>
+            <p>Volunteered for social work initiatives.</p>
+          </div>
+          <div class="tl-item reveal up delay-13">
+            <h4>Technex, IIT (BHU) Varanasi — Android App Development</h4>
+            <div class="meta">Nov 2020 – Dec 2020</div>
+            <p>Completed Android app dev program.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS / EDUCATION / CERTS -->
+    <section id="skills-section">
+      <div class="container grid-2">
+        <div class="reveal up">
+          <h2 class="section-title">Skills</h2>
+          <p class="sub">Strong in architecture and shipping polished mobile experiences.</p>
+          <div class="stack">
+            <span class="badge">Clean Architecture</span>
+            <span class="badge">BLoC / GetX / Riverpod</span>
+            <span class="badge">MVVM / MVC</span>
+            <span class="badge">Firebase / Supabase</span>
+            <span class="badge">SQLite / Hive</span>
+            <span class="badge">REST / GraphQL</span>
+            <span class="badge">CI/CD</span>
+            <span class="badge">Core Data</span>
+          </div>
+          <div class="gap"></div>
+          <h3>Languages</h3>
+          <div class="stack">
+            <span class="badge">English — Limited Working</span>
+            <span class="badge">Hindi — Native/Bilingual</span>
+            <span class="badge">Marathi — Native/Bilingual</span>
+          </div>
+        </div>
+        <div class="reveal up delay-1">
+          <h2 class="section-title">Education</h2>
+          <p class="sub">B.Tech (IT), Vishwakarma Institute of Information Technology — 2023</p>
+          <p>Diploma, Computer Engineering — Government Polytechnic Aurangabad (2020).</p>
+          <p>Certificate, Data Science Engineering — KP INFOTECH Services Pvt Ltd (Oct 2024 – Apr 2025).</p>
+          <div class="gap"></div>
+          <h3>Certifications</h3>
+          <div class="stack">
+            <span class="badge">Flutter</span>
+            <span class="badge">SQL & Relational DB 101</span>
+            <span class="badge">Python for Beginners</span>
+            <span class="badge">Red Hat SysAdmin L1 (3‑day)</span>
+            <span class="badge">Cybersecurity Workshop</span>
+          </div>
+          <div class="gap"></div>
+          <h3>Honors & Awards</h3>
+          <div class="stack">
+            <span class="badge">Bolt IoT & ML Course</span>
+            <span class="badge">Traffic Enhancement System</span>
+            <span class="badge">Facial Emotion/Age/Gender Recognition</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title reveal up">Let’s build something</h2>
+        <p class="sub reveal up delay-1">Email me or ping on LinkedIn. I usually reply within a day.</p>
+        <div class="cards">
+          <div class="card reveal up delay-1">
+            <div class="body">
+              <h3>Contact</h3>
+              <p>Email: <a href="mailto:avinashmagar15@gmail.com">avinashmagar15@gmail.com</a></p>
+              <p>LinkedIn: <a href="https://www.linkedin.com/in/avinash-magar-1ba853168" target="_blank" rel="noreferrer">linkedin.com/in/avinash-magar-1ba853168</a></p>
+              <p>Linktree: <a href="https://linktr.ee/avinashmagar15" target="_blank" rel="noreferrer">linktr.ee/avinashmagar15</a></p>
+              <p>Portfolio: <a href="https://sites.google.com/u/3/d/1jo90NCsIY-bptmv4F8B5LTitsbJrNlb-/p/1GyI7-cHGHQbR-xYuBGvYjSKs-Mou1q5M/edit" target="_blank" rel="noreferrer">Google Sites</a></p>
+            </div>
+          </div>
+          <div class="card reveal up delay-2">
+            <div class="body">
+              <h3>Resume</h3>
+              <p>Place your PDF at <code>assets/Avinash_Magar_Resume.pdf</code> to enable the download button.</p>
+              <a class="btn" href="assets/Avinash_Magar_Resume.pdf" download>Download Resume</a>
+            </div>
+          </div>
+          <div class="card reveal up delay-3">
+            <div class="body">
+              <h3>Quick Links</h3>
+              <div class="chips">
+                <a class="chip" href="#projects">Projects</a>
+                <a class="chip" href="#experience">Experience</a>
+                <a class="chip" href="#skills">Skills</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Avinash Magar — Built with HTML/CSS/JS.
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
