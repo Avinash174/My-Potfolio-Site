@@ -5,7 +5,6 @@ import { Projects } from "./views/sections/Projects";
 import { Skills } from "./views/sections/Skills";
 import { Experience } from "./views/sections/Experience";
 import { Contact } from "./views/sections/Contact";
-import { CustomCursor } from "./views/components/CustomCursor";
 import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
@@ -21,21 +20,32 @@ function App() {
 
   return (
     <div className={`app-container ${isDarkMode ? "dark" : "light"}`}>
-      <CustomCursor />
       <AnimatePresence>
         {loading ? (
           <motion.div
             key="loader"
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-zinc-950 flex items-center justify-center"
+            className="fixed inset-0 z-[100] bg-[var(--bg)] flex flex-col items-center justify-center gap-6 transition-colors duration-300"
           >
+            {/* Animated Logo */}
             <motion.div
-              animate={{
-                scale: [1, 1.2, 1],
-                rotate: [0, 180, 360],
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
               }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-12 h-12 border-4 border-emerald-500 border-t-transparent rounded-full"
+              className="text-4xl font-bold tracking-tight"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              <span className="gradient-text">AM</span>
+              <span className="text-[var(--fg-muted)]">.</span>
+            </motion.div>
+            {/* Spinner */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+              className="w-8 h-8 border-2 border-[var(--accent)] border-t-transparent rounded-full"
             />
           </motion.div>
         ) : (
@@ -54,14 +64,7 @@ function App() {
               <Contact profile={profile} />
             </main>
 
-            <footer className="py-12 border-t border-white/5 text-center text-zinc-500 text-sm">
-              <div className="container">
-                <p>
-                  © {new Date().getFullYear()} Avinash Magar. Built with React &
-                  Framer Motion.
-                </p>
-              </div>
-            </footer>
+            {/* Footer is integrated into Contact section */}
           </motion.div>
         )}
       </AnimatePresence>

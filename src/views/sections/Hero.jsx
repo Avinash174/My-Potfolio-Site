@@ -1,146 +1,154 @@
 import { motion } from "framer-motion";
-import { ChevronRight, Download, MapPin, Code2 } from "lucide-react";
-import { MagneticButton } from "../components/MagneticButton";
+import { ArrowRight, Download, MapPin, Sparkles } from "lucide-react";
 
 export const Hero = ({ profile }) => {
   if (!profile) return null;
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.12, delayChildren: 0.3 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
+
   return (
     <section
       id="top"
-      className="min-h-screen flex items-center pt-20 relative overflow-hidden"
+      className="min-h-screen flex flex-col justify-center pt-28 pb-16 relative overflow-hidden"
     >
-      {/* Dynamic Background elements */}
-      <div className="blob" style={{ top: "-10%", left: "-10%" }}></div>
+      {/* Background Glow Orbs */}
       <div
-        className="blob"
+        className="glow-orb w-[500px] h-[500px] bg-[var(--accent)] top-[-10%] left-[-10%] opacity-20"
+        style={{ animation: "pulse-glow 4s ease-in-out infinite" }}
+      />
+      <div
+        className="glow-orb w-[400px] h-[400px] bg-[var(--accent-secondary)] bottom-[10%] right-[-5%] opacity-15"
+        style={{ animation: "pulse-glow 5s ease-in-out infinite 1s" }}
+      />
+      <div
+        className="glow-orb w-[300px] h-[300px] bg-[var(--accent-tertiary)] top-[50%] left-[40%] opacity-10"
+        style={{ animation: "pulse-glow 6s ease-in-out infinite 2s" }}
+      />
+
+      {/* Grid Pattern Overlay */}
+      <div
+        className="absolute inset-0 z-0"
         style={{
-          bottom: "10%",
-          right: "10%",
-          background:
-            "radial-gradient(circle, rgba(59, 130, 246, 0.1), transparent 70%)",
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
+          backgroundSize: "40px 40px",
         }}
-      ></div>
+      />
 
-      <div className="container grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="container-custom relative z-10">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-4xl"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-[0.2em] uppercase mb-8"
-          >
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            {profile.title}
+          {/* Status Badge */}
+          <motion.div variants={itemVariants} className="mb-8">
+            <div className="inline-flex items-center gap-2.5 glass rounded-full px-5 py-2.5">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span className="text-sm font-medium text-[var(--fg-muted)]">
+                Available for work
+              </span>
+            </div>
           </motion.div>
 
-          <h1 className="text-6xl md:text-8xl font-extrabold mb-8 leading-[1.1] tracking-tight">
-            Design <span className="gradient-text">Systems</span> <br />
-            That Scale.
-          </h1>
-
-          <p className="text-lg md:text-xl text-zinc-400 mb-12 max-w-xl leading-relaxed">
-            I'm <span className="text-white font-semibold">{profile.name}</span>
-            . Crafting premium mobile experiences at the intersection of{" "}
-            <span className="text-emerald-400">clean code</span> and{" "}
-            <span className="text-blue-400">AI innovation</span>.
-          </p>
-
-          <div className="flex flex-wrap gap-6 mb-16">
-            <MagneticButton
-              href="#projects"
-              className="px-8 py-4 rounded-2xl bg-emerald-500 text-black font-bold flex items-center gap-2 hover:bg-emerald-400 transition-all hover:shadow-[0_0_40px_rgba(16,185,129,0.4)]"
-            >
-              Start Exploring <ChevronRight size={20} />
-            </MagneticButton>
-
-            <MagneticButton
-              href="#"
-              className="px-8 py-4 rounded-2xl glass font-semibold flex items-center gap-2 hover:bg-white/5 transition-all"
-            >
-              Curriculum Vitae <Download size={20} />
-            </MagneticButton>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-12 text-zinc-500">
-            <div className="flex flex-col gap-1.5">
-              <span className="text-white font-bold text-4xl">02+</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-zinc-500">
-                Years Experience
-              </span>
-            </div>
-            <div className="w-px h-12 bg-white/10 hidden sm:block"></div>
-            <div className="flex flex-col gap-1.5">
-              <span className="text-white font-bold text-4xl">12+</span>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-zinc-500">
-                Global Projects
-              </span>
-            </div>
-            <div className="w-px h-12 bg-white/10 hidden sm:block"></div>
-            <div className="flex flex-col gap-1.5">
-              <div className="flex items-center gap-2 text-zinc-300">
-                <MapPin size={14} className="text-emerald-500" />
-                <span className="text-xs font-semibold">
-                  {profile.location}
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-zinc-300">
-                <Code2 size={14} className="text-blue-500" />
-                <span className="text-xs font-semibold">Open to Work</span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, rotateY: 20 }}
-          animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-          className="relative hidden lg:block perspective-1000"
-        >
-          <motion.div
-            whileHover={{ rotateX: 10, rotateY: -10 }}
-            className="w-full aspect-square rounded-[40px] overflow-hidden relative z-10 p-1 group"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(16,185,129,0.5), rgba(59,130,246,0.5))",
-            }}
+          {/* Title */}
+          <motion.h1
+            variants={itemVariants}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.05] tracking-tight"
+            style={{ fontFamily: "var(--font-heading)" }}
           >
-            <div className="w-full h-full bg-[#080808] rounded-[38px] overflow-hidden relative">
-              <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
-                alt="Avinash Magar"
-                className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
+            I craft <span className="gradient-text">premium</span>
+            <br />
+            mobile experiences
+            <span className="text-[var(--accent)]">.</span>
+          </motion.h1>
+
+          {/* Description */}
+          <motion.p
+            variants={itemVariants}
+            className="text-lg md:text-xl text-[var(--fg-muted)] mb-12 max-w-xl leading-relaxed"
+          >
+            Hi, I'm{" "}
+            <span className="text-[var(--fg)] font-semibold">
+              {profile.name}
+            </span>
+            — a developer building scalable mobile systems at the intersection
+            of
+            <span className="text-[var(--accent-light)]">
+              {" "}
+              clean architecture
+            </span>{" "}
+            and
+            <span className="text-[var(--accent-secondary)]">
+              {" "}
+              AI innovation
+            </span>
+            .
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap gap-4 items-center mb-20"
+          >
+            <a href="#projects" className="btn-primary">
+              <span>View Projects</span>
+              <ArrowRight
+                size={18}
+                className="group-hover:translate-x-1 transition-transform"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            </div>
+            </a>
+            <a href="#contact" className="btn-outline">
+              <Download size={18} />
+              <span>Download CV</span>
+            </a>
           </motion.div>
 
-          {/* Floating decorative elements */}
+          {/* Stats Grid */}
           <motion.div
-            animate={{ y: [0, -20, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-6 -right-6 glass p-4 z-20"
+            variants={itemVariants}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6"
           >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500">
-                <Code2 size={20} />
-              </div>
-              <div>
-                <div className="text-[10px] text-zinc-500 uppercase font-bold tracking-wider">
-                  Expertise
+            {[
+              { value: "2+", label: "Years Experience" },
+              { value: "12+", label: "Projects Shipped" },
+              { value: "5+", label: "Happy Clients" },
+              { value: "∞", label: "Lines of Code" },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="glass-card !p-5 !rounded-2xl text-center group cursor-default"
+              >
+                <div
+                  className="text-3xl md:text-4xl font-bold mb-1 gradient-text"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  {stat.value}
                 </div>
-                <div className="text-sm font-bold">Flutter Dev</div>
+                <div className="text-xs text-[var(--fg-muted)] uppercase tracking-widest font-medium">
+                  {stat.label}
+                </div>
               </div>
-            </div>
+            ))}
           </motion.div>
-
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-emerald-500/10 blur-[100px] rounded-full"></div>
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-500/10 blur-[100px] rounded-full"></div>
         </motion.div>
       </div>
     </section>

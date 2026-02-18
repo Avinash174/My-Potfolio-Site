@@ -8,120 +8,121 @@ export const Projects = ({ projects }) => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.15 },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { y: 40, opacity: 0 },
     visible: {
-      opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+      opacity: 1,
+      transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
     },
   };
 
   return (
-    <section id="projects" className="py-32 relative">
-      <div className="container">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
-          <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-emerald-500 font-bold tracking-widest uppercase text-xs mb-4"
-            >
-              Portfolio
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-5xl md:text-6xl font-bold"
-            >
-              Crafting Digital <br />
-              <span className="gradient-text">Masterpieces</span>
-            </motion.h2>
-          </div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="text-zinc-500 text-lg max-w-xs"
-          >
-            Turning complex problems into elegant, scalable solutions.
-          </motion.p>
-        </div>
+    <section id="projects" className="py-32 relative overflow-hidden">
+      {/* Background Orb */}
+      <div className="glow-orb w-[500px] h-[500px] bg-[var(--accent-secondary)] top-[20%] left-[-15%] opacity-10" />
 
+      <div className="container-custom relative z-10">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <span className="section-label mb-4 block">Portfolio</span>
+          <h2
+            className="text-4xl md:text-6xl font-bold tracking-tight mb-4"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            Featured <span className="gradient-text">Projects</span>
+          </h2>
+          <p className="text-[var(--fg-muted)] text-lg max-w-xl">
+            A curated collection of projects that showcase my expertise in
+            mobile development and AI systems.
+          </p>
+        </motion.div>
+
+        {/* Projects Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-2 gap-10"
+          className="grid md:grid-cols-2 gap-8"
         >
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -12 }}
-              className="glass p-5 group flex flex-col h-full overflow-hidden"
+              className="glass-card !p-0 group"
             >
-              <div className="relative aspect-video rounded-2xl overflow-hidden mb-8 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-700">
+              {/* Image */}
+              <div className="relative h-56 md:h-64 overflow-hidden rounded-t-[24px]">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center gap-6 backdrop-blur-[2px]">
-                  {project.links.source && (
-                    <motion.a
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-transparent to-transparent opacity-60" />
+
+                {/* Floating Action Buttons */}
+                <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                  {project.links?.source && project.links.source !== "#" && (
+                    <a
                       href={project.links.source}
-                      className="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-2.5 rounded-xl glass text-white hover:bg-white/20 transition-colors"
                     >
-                      <Github size={24} />
-                    </motion.a>
+                      <Github size={18} />
+                    </a>
                   )}
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    href={project.links.caseStudy}
-                    className="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center hover:bg-emerald-500 hover:text-white transition-colors"
-                  >
-                    <ArrowUpRight size={24} />
-                  </motion.a>
+                  {project.links?.caseStudy &&
+                    project.links.caseStudy !== "#" && (
+                      <a
+                        href={project.links.caseStudy}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-2.5 rounded-xl glass text-white hover:bg-white/20 transition-colors"
+                      >
+                        <ExternalLink size={18} />
+                      </a>
+                    )}
                 </div>
               </div>
 
-              <div className="flex-1 flex flex-col px-1">
-                <div className="flex items-start justify-between mb-4">
+              {/* Content */}
+              <div className="p-6 md:p-8">
+                <div className="flex items-start justify-between gap-4 mb-3">
                   <div>
-                    <h3 className="text-3xl font-bold mb-1 group-hover:text-emerald-400 transition-colors uppercase tracking-tight">
+                    <h3
+                      className="text-xl font-bold mb-1 group-hover:text-[var(--accent-light)] transition-colors"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
                       {project.title}
                     </h3>
-                    <p className="text-sm font-bold text-zinc-500">
+                    <p className="text-sm text-[var(--fg-muted)]">
                       {project.subtitle}
                     </p>
                   </div>
+                  <ArrowUpRight
+                    size={20}
+                    className="text-[var(--fg-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0 mt-1"
+                  />
                 </div>
 
-                <p className="text-zinc-400 mb-8 leading-relaxed">
+                <p className="text-sm text-[var(--fg-muted)] mb-5 leading-relaxed line-clamp-2">
                   {project.description}
                 </p>
 
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {project.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-white/5 border border-white/5 rounded-lg text-[10px] font-bold text-zinc-400 uppercase tracking-widest group-hover:border-emerald-500/30 group-hover:text-zinc-200 transition-all"
-                    >
+                <div className="flex flex-wrap gap-2">
+                  {project.techStack.map((tech, i) => (
+                    <span key={i} className="tech-badge">
                       {tech}
                     </span>
                   ))}
