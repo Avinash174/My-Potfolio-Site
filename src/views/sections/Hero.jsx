@@ -128,9 +128,9 @@ export const Hero = ({ profile }) => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6"
           >
             {[
-              { value: "2+", label: "Years Experience" },
-              { value: "12+", label: "Projects Shipped" },
-              { value: "5+", label: "Happy Clients" },
+              { value: "3+", label: "Years Experience" },
+              { value: "13+", label: "Projects Shipped" },
+              { value: "2K+", label: "Followers" },
               { value: "∞", label: "Lines of Code" },
             ].map((stat, i) => (
               <div
